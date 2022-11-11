@@ -1,8 +1,6 @@
 .CreateTodoButtonContainer {
   display: flex;
   justify-content: right;
-  width: 70%;
-  margin: 0 auto;
 }
 .CreateTodoButton {
   width: 8rem;

@@ -9,7 +9,8 @@ let defaultTodos = [
   { text: "Platinar el GOW:Ragnarok", completed: false },
   { text: "Tomar cursos de react", completed: false },
   { text: "Correr un maraton de 10km", completed: false },
-  { text: "Conseguir los subfusiles de oro ", completed: false },
+  { text: "Conseguir los subfusiles de oro", completed: false },
+  { text: "Conseguir los subfusiles de platino", completed: false },
   { text: "Ir al gym", completed: false },
   { text: "Correr", completed: false },
 ];

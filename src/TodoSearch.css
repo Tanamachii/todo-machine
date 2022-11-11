@@ -5,15 +5,15 @@
 .TodoSearch {
   text-align: center;
   background-color: #c3c3c3;
-  width: 60%;
+  width: 80%;
   padding: 12px;
-  border: 0;
+  border: 5px dashed white;
 }
 .animacion-input {
   transition: width 0.4s ease-in-out;
 }
 .animacion-input:focus {
-  width: 80% !important;
+  width: 100% !important;
 }
 
 .TodoSearch::placeholder {

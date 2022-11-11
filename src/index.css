@@ -19,6 +19,8 @@ body {
   font-size: 16px;
   font-family: "MonoCraftRegular";
   background-color: #282828;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
