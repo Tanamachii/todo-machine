@@ -1,9 +1,9 @@
 import React from "react";
-import { TodoCounter } from "./TodoCounter";
-import { TodoSearch } from "./TodoSearch";
-import { TodoList } from "./TodoList";
-import { TodoItem } from "./TodoItem";
-import { CreateTodoButton } from "./CreateTodoButton";
+import { TodoCounter } from "./components/TodoCounter";
+import { TodoSearch } from "./components/TodoSearch";
+import { TodoList } from "./components/TodoList";
+import { TodoItem } from "./components/TodoItem";
+import { CreateTodoButton } from "./components/CreateTodoButton";
 
 let defaultTodos = [
   { text: "Platinar el GOW:Ragnarok", completed: false },
@@ -43,6 +43,14 @@ function App() {
     newTodos.splice(todoIndex, 1);
     setTodos(newTodos);
   };
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    if (searchValue) {
+      newTodos.push({ text: text, completed: false });
+    }
+    setTodos(newTodos);
+    setSearchValue("");
+  };
 
   return (
     <>
@@ -63,7 +71,11 @@ function App() {
           />
         ))}
       </TodoList>
-      <CreateTodoButton />
+      <CreateTodoButton
+        onComplete={() => {
+          addTodo(searchValue);
+        }}
+      />
     </>
   );
 }

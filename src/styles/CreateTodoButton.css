@@ -13,5 +13,5 @@
 
 .CreateTodoButton:hover {
   background-color: #868686;
-  cursor: url("../public/cursor/pointer.png") 10 9, pointer;
+  cursor: url("../../public/cursor/pointer.png") 10 9, pointer;
 }

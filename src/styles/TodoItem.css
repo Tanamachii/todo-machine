@@ -8,7 +8,7 @@
 }
 
 .TodoItem_completed:hover {
-  cursor: url("../public/cursor/pointer.png") 2 10, pointer;
+  cursor: url("../../public/cursor/pointer.png") 2 10, pointer;
 }
 .TodoItem_delete:hover {
   color: red;
