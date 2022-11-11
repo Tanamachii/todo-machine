@@ -1,0 +1,28 @@
+.TodoItem {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20rem;
+  font-size: 2.4rem;
+}
+
+.TodoItem_completed:hover {
+  cursor: url("../public/cursor/pointer.png") 2 10, pointer;
+}
+.TodoItem_delete:hover {
+  color: red;
+}
+.TodoItem:hover {
+  color: rgb(198, 198, 198);
+}
+.TodoItem p {
+  margin: 0;
+}
+
+.Icon-check--active {
+  color: greenyellow;
+}
+.TodoItem-p--complete {
+  text-decoration: line-through;
+}

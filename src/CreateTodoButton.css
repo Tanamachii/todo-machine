@@ -1,0 +1,19 @@
+.CreateTodoButtonContainer {
+  display: flex;
+  justify-content: right;
+  width: 70%;
+  margin: 0 auto;
+}
+.CreateTodoButton {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  font-size: 64px;
+  background-color: #c3c3c3;
+  border: none;
+}
+
+.CreateTodoButton:hover {
+  background-color: #868686;
+  cursor: url("../public/cursor/pointer.png") 10 9, pointer;
+}

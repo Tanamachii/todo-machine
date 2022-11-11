@@ -5,27 +5,64 @@ import { TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
 import { CreateTodoButton } from "./CreateTodoButton";
 
-const todos = [
-  { text: "Cortar cebolla", completed: false },
-  { text: "Tomar un curos de react", completed: false },
-  { text: "Montar en bici unos 100km", completed: false },
-  { text: "Conseguir los sub de oro", completed: false },
+let defaultTodos = [
+  { text: "Platinar el GOW:Ragnarok", completed: false },
+  { text: "Tomar cursos de react", completed: false },
+  { text: "Correr un maraton de 10km", completed: false },
+  { text: "Conseguir los subfusiles de oro ", completed: false },
+  { text: "Ir al gym", completed: false },
+  { text: "Correr", completed: false },
 ];
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultTodos);
+  const [searchValue, setSearchValue] = React.useState("");
+
+  const completedTodos = todos.filter((todo) => todo.completed).length;
+  const todosMatch = todos.filter((todo) =>
+    todo.text.toUpperCase().includes(searchValue)
+  );
+
+  const totalTodos = todos.length;
+
+  const completeTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const newTodos = [...todos];
+    if (newTodos[todoIndex].completed) {
+      newTodos[todoIndex].completed = false;
+    } else {
+      newTodos[todoIndex].completed = true;
+    }
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const todoIndex = todos.findIndex((todo) => todo.text === text);
+    const newTodos = [...todos];
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  };
+
   return (
     <>
-      <TodoCounter />
-      <h2>Haz completado 2 de 3 TODOs</h2>
-      <TodoSearch />
-      <input placeholder="Cebolla"></input>
+      <TodoCounter completed={completedTodos} total={totalTodos} />
+      <TodoSearch setSearchValue={setSearchValue} searchValue={searchValue} />
       <TodoList>
-        {todos.map((e) => (
-          <TodoItem key={e.text} text={e.text} />
+        {todosMatch.map((e) => (
+          <TodoItem
+            onComplete={() => {
+              completeTodo(e.text);
+            }}
+            onDelete={() => {
+              deleteTodo(e.text);
+            }}
+            completed={e.completed}
+            key={e.text}
+            text={e.text.toUpperCase()}
+          />
         ))}
       </TodoList>
       <CreateTodoButton />
-      <button>+</button>
     </>
   );
 }

@@ -1,0 +1,26 @@
+.TodoSeatchContainer {
+  display: flex;
+  justify-content: center;
+}
+.TodoSearch {
+  text-align: center;
+  background-color: #c3c3c3;
+  width: 60%;
+  padding: 12px;
+  border: 0;
+}
+.animacion-input {
+  transition: width 0.4s ease-in-out;
+}
+.animacion-input:focus {
+  width: 80% !important;
+}
+
+.TodoSearch::placeholder {
+  font-family: "MonoCraftRegular";
+}
+
+input[type="text"] {
+  font-size: 32px;
+  font-family: "MonoCraftRegular";
+}
