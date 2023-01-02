@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/todo-machine/static/css/main.b40df63b.css",
+    "main.js": "/todo-machine/static/js/main.79288a12.js",
+    "static/media/Monocraft.otf": "/todo-machine/static/media/Monocraft.0ce0fa6093f2e93b6e97.otf",
+    "index.html": "/todo-machine/index.html",
+    "main.b40df63b.css.map": "/todo-machine/static/css/main.b40df63b.css.map",
+    "main.79288a12.js.map": "/todo-machine/static/js/main.79288a12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b40df63b.css",
+    "static/js/main.79288a12.js"
+  ]
+}
